@@ -1,0 +1,21 @@
+<mat-card cdkDrag class="example-card">
+  <mat-card-title>{{post.title | capitalize}}</mat-card-title>
+  <mat-card-content>
+    <p>
+      {{post.body | capitalize}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Comments...
+        </mat-panel-title>
+        <mat-panel-description>
+          <mat-icon>message</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-comments [postId]="post.postId"></app-comments>
+    </mat-expansion-panel>
+  </mat-card-actions>
+</mat-card>
